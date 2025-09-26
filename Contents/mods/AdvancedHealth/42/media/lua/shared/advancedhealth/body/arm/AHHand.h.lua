@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AHHand: AHBodyPart
----
---- @field __index table
+--- @field __index AHHand
+--- 
 local AHHand = {};
 
 --- @param data AHHandModData

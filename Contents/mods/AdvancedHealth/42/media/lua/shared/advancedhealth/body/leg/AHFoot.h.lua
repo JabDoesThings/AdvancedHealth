@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AHFoot: AHBodyPart
----
---- @field __index table
+--- @field __index AHFoot
+--- 
 local AHFoot = {};
 
 --- @param data AHFootModData

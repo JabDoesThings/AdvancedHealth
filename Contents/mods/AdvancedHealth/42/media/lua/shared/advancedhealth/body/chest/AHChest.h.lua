@@ -1,6 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AHChest: AHBodyPart
+--- @field __index AHChest
+--- 
 local AHChest = {};
 
 --- @return AHChest

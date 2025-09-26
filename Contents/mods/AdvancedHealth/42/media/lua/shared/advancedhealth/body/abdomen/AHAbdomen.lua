@@ -1,12 +1,16 @@
 local assert = require 'advancedhealth/util/assert';
+local AHBodyPart = require 'advancedhealth/body/AHBodyPart';
 
-local AHAbdomen = ISBaseObject:derive('AHAbdomen');
+local AHAbdomen = AHBodyPart:derive('AHAbdomen');
 --- @cast AHAbdomen AHAbdomen
 
-function AHAbdomen:new()
-    local o = {};
+function AHAbdomen:new(body)
+    
+    -- Class Stuff --
+    local o = AHBodyPart:new(body, 'Abdomen');
     setmetatable(o, self);
     self.__index = self;
+
     return o;
 end
 

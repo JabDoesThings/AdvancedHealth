@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
---- @class AHBody: ISBaseObject
----
---- @field __index table
+--- @class AHBody: AHBodyPart
+--- @field __index AHBody
+--- 
 local AHBody = {};
 
 function AHBody:update() end

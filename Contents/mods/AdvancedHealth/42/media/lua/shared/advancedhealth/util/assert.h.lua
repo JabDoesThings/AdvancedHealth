@@ -72,13 +72,13 @@ function API.assertNumberRange(path, value, min, max, depth) end
 
 --- @param path string The name of (or path to) the variable.
 --- @param value string The value of the variable.
---- @param values string[] All enum values.
+--- @param values Enum | string[] All enum values.
 --- @param depth integer|nil Tracks the depth of calls to point towards the base assert check call.
 function API.assertEnum(path, value, values, depth) end
 
 --- @param path string The name of (or path to) the variable.
 --- @param value string | nil The value of the variable.
---- @param values string[] All enum values.
+--- @param values Enum | string[] All enum values.
 --- @param depth integer|nil Tracks the depth of calls to point towards the base assert check call.
 function API.assertEnumOrNil(path, value, values, depth) end
 

@@ -1,12 +1,16 @@
---- @meta
+--- @meta _
 
 --- @class AHArm: AHBodyPart
----
---- @field __index table
+--- @field __index AHArm
+--- 
+--- @field side AHBodySideValue
 local AHArm = {};
 
+--- @param body AHBody
+--- @param side AHBodySideValue
+--- 
 --- @return AHArm
-function AHArm:new() end
+function AHArm:new(body, side) end
 
 --- @param data AHArmModData
 function AHArm:audit(data) end

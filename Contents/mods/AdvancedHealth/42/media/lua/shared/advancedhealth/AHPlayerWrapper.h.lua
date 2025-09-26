@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class AHPlayerWrapper: ISBaseObject
 --- @field __index AHPlayerWrapper
@@ -10,8 +10,8 @@ local AHPlayerWrapper = {};
 
 --- @param player IsoPlayer
 --- 
---- @return AHPlayerWrapper
+--- @return AHPlayerWrapper playerWrapperInstance
 function AHPlayerWrapper:new(player) end
 
---- @return string
+--- @return string The full name of the player.
 function AHPlayerWrapper:getName() end

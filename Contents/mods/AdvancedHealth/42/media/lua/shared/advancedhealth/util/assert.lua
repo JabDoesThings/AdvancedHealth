@@ -222,6 +222,15 @@ end
 
 function API.assertEnum(path, value, values, depth)
     depth = depth or 2;
+
+    --- Check if is Enum.
+    if type(values) == 'table' and values.values ~= nil then
+        --- @cast values Enum
+        values = values.values;
+    end
+
+    --- @cast values string[]
+
     API.assertNonEmptyString(path, value, depth + 1);
     API.assertNonEmptyStringArray('types', values, depth + 1);
 

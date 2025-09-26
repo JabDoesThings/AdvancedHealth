@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AHAbdomen: AHBodyPart
----
---- @field __index table
+--- @field __index AHAbdomen
+--- 
 local AHAbdomen = {};
 
 --- @return AHAbdomen

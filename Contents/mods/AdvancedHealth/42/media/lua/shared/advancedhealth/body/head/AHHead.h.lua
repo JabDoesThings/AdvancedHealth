@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AHHead: AHBodyPart
----
---- @field __index table
+--- @field __index AHHead
+--- 
 local AHHead = {};
 
 --- @return AHHead

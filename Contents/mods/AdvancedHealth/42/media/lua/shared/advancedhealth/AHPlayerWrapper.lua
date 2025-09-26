@@ -1,5 +1,7 @@
 local AHPlayerWrapper = ISBaseObject:derive('AHPlayerWrapper');
 
+local AHBody = require 'advancedhealth/body/AHBody';
+
 --- @cast AHPlayerWrapper AHPlayerWrapper
 
 function AHPlayerWrapper:new(player)
@@ -10,6 +12,10 @@ function AHPlayerWrapper:new(player)
     o.player = player;
     o.name = player:getFullName();
     o.index = player:getIndex();
+
+    --- TODO: Load from player mod-data.
+
+    o.body = AHBody:new(nil, 'Body');
 
     return o;
 end

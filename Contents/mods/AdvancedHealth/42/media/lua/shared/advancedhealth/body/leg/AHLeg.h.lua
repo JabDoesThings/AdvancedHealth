@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AHLeg: AHBodyPart
----
---- @field __index table
+--- @field __index AHLeg
+--- 
 local AHLeg = {};
 
 --- @return AHLeg
