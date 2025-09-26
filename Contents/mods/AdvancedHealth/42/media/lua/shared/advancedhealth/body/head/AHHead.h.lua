@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AHHead: ISBaseObject
+--- @class AHHead: AHBodyPart
 ---
 --- @field __index table
 local AHHead = {};

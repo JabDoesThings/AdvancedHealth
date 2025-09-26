@@ -5,6 +5,8 @@
 --- @field __index table
 local AHBody = {};
 
+function AHBody:update() end
+
 --- @param data AHBodyModData
 function AHBody:audit(data) end
 

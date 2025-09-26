@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AHHand: ISBaseObject
+--- @class AHHand: AHBodyPart
 ---
 --- @field __index table
 local AHHand = {};

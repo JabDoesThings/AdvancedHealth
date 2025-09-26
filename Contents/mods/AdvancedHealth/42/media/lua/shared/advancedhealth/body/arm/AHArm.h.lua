@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AHArm: ISBaseObject
+--- @class AHArm: AHBodyPart
 ---
 --- @field __index table
 local AHArm = {};

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AHLeg: ISBaseObject
+--- @class AHLeg: AHBodyPart
 ---
 --- @field __index table
 local AHLeg = {};

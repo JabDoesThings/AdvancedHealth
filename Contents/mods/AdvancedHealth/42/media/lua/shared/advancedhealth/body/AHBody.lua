@@ -1,6 +1,7 @@
 local assert = require 'advancedhealth/util/assert';
+local AHBodyPart = require 'advancedhealth/body/AHBodyPart';
 
-local AHBody = ISBaseObject:derive('AHBody');
+local AHBody = AHBodyPart:derive('AHBody');
 --- @cast AHBody AHBody
 
 function AHBody:new()
@@ -12,6 +13,10 @@ end
 
 function AHBody:audit(data)
     -- TODO: Implement.
+end
+
+function AHBody:update()
+
 end
 
 function AHBody:load(data)

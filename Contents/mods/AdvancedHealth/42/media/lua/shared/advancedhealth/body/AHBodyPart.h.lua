@@ -10,6 +10,8 @@ local AHBodyPart = {};
 --- @return AHBodyPart
 function AHBodyPart:new() end
 
+function AHBodyPart:update() end
+
 --- @param data AHBodyPartModData
 function AHBodyPart:audit(data) end
 

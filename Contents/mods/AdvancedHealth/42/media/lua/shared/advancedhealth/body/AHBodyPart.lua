@@ -15,6 +15,8 @@ function AHBodyPart:new()
     return o;
 end
 
+function AHBodyPart:update() end
+
 function AHBodyPart:audit(data)
     -- TODO: Implement.
 end

@@ -1,6 +1,7 @@
 local assert = require 'advancedhealth/util/assert';
+local AHBodyPart = require 'advancedhealth/body/AHBodyPart';
 
-local AHLeg = ISBaseObject:derive('AHLeg');
+local AHLeg = AHBodyPart:derive('AHLeg');
 --- @cast AHLeg AHLeg
 
 function AHLeg:new()
@@ -8,6 +9,10 @@ function AHLeg:new()
     setmetatable(o, self);
     self.__index = self;
     return o;
+end
+
+function AHLeg:update()
+
 end
 
 function AHLeg:audit(data)
