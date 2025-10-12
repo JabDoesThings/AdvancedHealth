@@ -1,4 +1,4 @@
-local assert = require 'advancedhealth/util/assert';
+local assert = require 'asledgehammer/assert';
 local AHBodyPart = require 'advancedhealth/body/AHBodyPart';
 
 local AHAbdomen = AHBodyPart:derive('AHAbdomen');

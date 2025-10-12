@@ -1,4 +1,4 @@
-local assert = require 'advancedhealth/util/assert';
+local assert = require 'asledgehammer/assert';
 
 local AHHead = ISBaseObject:derive('AHHead');
 --- @cast AHHead AHHead

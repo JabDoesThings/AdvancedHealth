@@ -1,4 +1,4 @@
-local assert = require 'advancedhealth/util/assert';
+local assert = require 'asledgehammer/assert';
 local AHPlayerWrapper = require 'advancedhealth/AHPlayerWrapper';
 
 --- @param name string

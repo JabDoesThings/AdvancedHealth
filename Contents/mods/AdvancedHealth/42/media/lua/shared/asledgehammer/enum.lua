@@ -2,7 +2,7 @@
 --- @author JabDoesThings, asledgehammer 2025
 --- ]]
 
-local assert = require 'advancedhealth/util/assert';
+local assert = require 'asledgehammer/assert';
 
 -- (Build enum table)
 
