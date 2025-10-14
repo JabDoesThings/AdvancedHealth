@@ -6,6 +6,7 @@
 --- @field id string The internal unique ID of the moodle.
 --- @field name string The formal name of the moodle.
 --- @field index integer The index position in the manager's render array.
+--- @field visible boolean If true the moodle renders.
 local AHUIMoodle = {};
 
 --- @param id string

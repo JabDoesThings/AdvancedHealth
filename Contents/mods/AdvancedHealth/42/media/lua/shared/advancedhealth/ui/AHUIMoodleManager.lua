@@ -57,20 +57,31 @@ function AHUIMoodleManager:prerender()
         self.__dirty = false;
     end
 
+    local moodle;
+
     -- Simulate the update using prerender(), so updates aren't fps-limited.
     for i = 1, self.nextIndex - 1 do
-        self.moodlesIndexed[i]:update(self.graphics, self.settings);
+        moodle = self.moodlesIndexed[i];
+        moodle:update(self.graphics, self.settings);
     end
 
     -- Prerender, for things like backgrounds.
     for i = 1, self.nextIndex - 1 do
-        self.moodlesIndexed[i]:prerender(self.graphics, self.settings);
+        moodle = self.moodlesIndexed[i];
+        if moodle.visible then
+            self.moodlesIndexed[i]:prerender(self.graphics, self.settings);
+        end
     end
 end
 
 function AHUIMoodleManager:render()
+    local moodle;
+
     for i = 1, self.nextIndex - 1 do
-        self.moodlesIndexed[i]:render(self.graphics, self.settings);
+        moodle = self.moodlesIndexed[i];
+        if moodle.visible then
+            self.moodlesIndexed[i]:render(self.graphics, self.settings);
+        end
     end
 end
 

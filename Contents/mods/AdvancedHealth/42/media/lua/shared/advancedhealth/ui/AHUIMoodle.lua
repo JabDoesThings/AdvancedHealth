@@ -13,6 +13,8 @@ function AHUIMoodle:new(id, name, index)
     o.name = name;
     o.index = index;
 
+    o.visible = false;
+
     return o;
 end
 
@@ -20,7 +22,7 @@ function AHUIMoodle:update(graphics, settings)
     -- Update dimensions here --
 end
 
-function AHUIMoodle:prerender(graphics, settings)
+function AHUIMoodle:prerender(graphics, settings)    
     -- Render backgrounds or borders here --
 end
 
