@@ -1,10 +1,14 @@
+--- @type AHUIMoodleSettingsModule
 local API = {};
 
---- @return AHUIMoodleSettings
 function API.default()
-    return {
-        size = 128
+    --- @type AHUIMoodleSettings
+    local settings = {
+        size = 128,
+        position = 'bottom-right'
     };
+
+    return settings;
 end
 
 return API;

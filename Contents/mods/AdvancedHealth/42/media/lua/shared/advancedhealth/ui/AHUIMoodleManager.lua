@@ -19,8 +19,11 @@ function AHUIMoodleManager:new()
     o.graphics = UIElement.new(o);
     UIManager.AddUI(o.graphics);
 
-    -- To store and call our moodles.
+    -- To store the registered moodles.
     o.moodles = {};
+
+    -- To update & render the registered moodles.
+    o.moodlesIndexed = {};
 
     o.settings = AHUIMoodleSettings.default();
 
@@ -48,7 +51,6 @@ function AHUIMoodleManager:rebuild()
 end
 
 function AHUIMoodleManager:prerender()
-
     -- Check here for any needed rebuilding or updating of data pre-process.
     if self.__dirty then
         self:rebuild();
