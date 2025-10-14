@@ -1,4 +1,5 @@
 local AHUIMoodle = require 'advancedhealth/ui/AHUIMoodle';
+local AHUIMoodleSettings = require 'advancedhealth/ui/AHUIMoodleSettings';
 
 local AHUIMoodleManager = ISBaseObject:derive('AHUIMoodleManager');
 --- @cast AHUIMoodleManager AHUIMoodleManager
@@ -15,11 +16,13 @@ function AHUIMoodleManager:new()
     o.__dirty = true;
 
     -- Instantiate and add UI element.
-    o.javaObject = UIElement.new(o);
-    UIManager.AddUI(o.javaObject);
+    o.graphics = UIElement.new(o);
+    UIManager.AddUI(o.graphics);
 
     -- To store and call our moodles.
     o.moodles = {};
+
+    o.settings = AHUIMoodleSettings.default();
 
     return o;
 end
@@ -45,18 +48,27 @@ function AHUIMoodleManager:rebuild()
 end
 
 function AHUIMoodleManager:prerender()
+
+    -- Check here for any needed rebuilding or updating of data pre-process.
     if self.__dirty then
         self:rebuild();
         self.__dirty = false;
     end
-    for i=1, self.nextIndex - 1 do
-        self.moodlesIndexed[i]:update();
+
+    -- Simulate the update using prerender(), so updates aren't fps-limited.
+    for i = 1, self.nextIndex - 1 do
+        self.moodlesIndexed[i]:update(self.graphics, self.settings);
+    end
+
+    -- Prerender, for things like backgrounds.
+    for i = 1, self.nextIndex - 1 do
+        self.moodlesIndexed[i]:prerender(self.graphics, self.settings);
     end
 end
 
 function AHUIMoodleManager:render()
-    for i=1, self.nextIndex - 1 do
-        self.moodlesIndexed[i]:render();
+    for i = 1, self.nextIndex - 1 do
+        self.moodlesIndexed[i]:render(self.graphics, self.settings);
     end
 end
 

@@ -4,9 +4,10 @@
 --- @field __index AHUIMoodleManager
 --- 
 --- @field name string
---- @field javaObject UIElement
+--- @field graphics UIElement
 --- @field moodles table<string, AHUIMoodle> Moodles registered by their name.
 --- @field moodlesIndexed AHUIMoodle[] Compiled moodles to render.
+--- @field settings AHUIMoodleSettings The settings forwarded to AHUIMoodle when updating & rendering.
 --- @field nextIndex integer (Static) Positive incremental value to track where to place moodles.
 --- @field __dirty boolean If true, the moodlesIndexed array needs to be rebuilt.
 local AHUIMoodleManager = {};

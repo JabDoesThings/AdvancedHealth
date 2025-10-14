@@ -16,16 +16,16 @@ function AHUIMoodle:new(id, name, index)
     return o;
 end
 
-function AHUIMoodle:update()
-
+function AHUIMoodle:update(graphics, settings)
+    -- Update dimensions here --
 end
 
-function AHUIMoodle:prerender()
-
+function AHUIMoodle:prerender(graphics, settings)
+    -- Render backgrounds or borders here --
 end
 
-function AHUIMoodle:render()
-
+function AHUIMoodle:render(graphics, settings)
+    -- Render texture content here --
 end
 
 return AHUIMoodle;
